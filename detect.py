@@ -213,8 +213,7 @@ def run(
                         save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
 
                 # ============================ 新增马赛克处理代码 ============================
-                if mosaic:  # 如果启用了马赛克功能
-                    # 修改点2: 直接对原图应用马赛克，不经过annotator绘制
+                if mosaic:
                     im0 = apply_mosaic(im0, det, mosaic_size=mosaic_size, classes_to_mosaic=mosaic_classes)
                 # ============================ 马赛克处理代码结束 ============================
 
